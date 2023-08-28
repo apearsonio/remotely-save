@@ -4,7 +4,7 @@ import { nanoid } from "nanoid";
 import { requireApiVersion, TAbstractFile, TFile, TFolder } from "obsidian";
 
 import { API_VER_STAT_FOLDER, SUPPORTED_SERVICES_TYPE } from "./baseTypes";
-import type { SyncPlanType } from "./sync";
+import type { SyncPlanType } from "./sync/sync";
 import { statFix, toText, unixTimeToStr } from "./misc";
 
 import { log } from "./moreOnLog";

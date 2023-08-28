@@ -32,31 +32,31 @@ import {
   clearExpiredLoggerOutputRecords,
   clearExpiredSyncPlanRecords,
 } from "./localdb";
-import { RemoteClient } from "./remote";
+import { RemoteClient } from "./remotes/remote";
 import {
   DEFAULT_DROPBOX_CONFIG,
   getAuthUrlAndVerifier as getAuthUrlAndVerifierDropbox,
   sendAuthReq as sendAuthReqDropbox,
   setConfigBySuccessfullAuthInplace as setConfigBySuccessfullAuthInplaceDropbox,
-} from "./remoteForDropbox";
+} from "./remotes/dropbox";
 import {
   AccessCodeResponseSuccessfulType,
   DEFAULT_ONEDRIVE_CONFIG,
   sendAuthReq as sendAuthReqOnedrive,
   setConfigBySuccessfullAuthInplace as setConfigBySuccessfullAuthInplaceOnedrive,
-} from "./remoteForOnedrive";
-import { DEFAULT_S3_CONFIG } from "./remoteForS3";
-import { DEFAULT_WEBDAV_CONFIG } from "./remoteForWebdav";
+} from "./remotes/onedrive";
+import { DEFAULT_S3_CONFIG } from "./remotes/s3";
+import { DEFAULT_WEBDAV_CONFIG } from "./remotes/webdav";
 import { RemotelySaveSettingTab } from "./settings";
-import { fetchMetadataFile, parseRemoteItems, SyncStatusType } from "./sync";
-import { doActualSync, getSyncPlan, isPasswordOk } from "./sync";
+import { fetchMetadataFile, parseRemoteItems, SyncStatusType } from "./sync/sync";
+import { doActualSync, getSyncPlan, isPasswordOk } from "./sync/sync";
 import { messyConfigToNormal, normalConfigToMessy } from "./configPersist";
 import { ObsConfigDirFileType, listFilesInObsFolder } from "./obsFolderLister";
 import { I18n } from "./i18n";
 import type { LangType, LangTypeAndAuto, TransItemType } from "./i18n";
 
 import { DeletionOnRemote, MetadataOnRemote } from "./metadataOnRemote";
-import { SyncAlgoV2Modal } from "./syncAlgoV2Notice";
+import { SyncAlgoV2Modal } from "./sync/syncAlgoV2Notice";
 import { applyPresetRulesInplace } from "./presetRules";
 
 import { applyLogWriterInplace, log } from "./moreOnLog";
@@ -65,7 +65,7 @@ import {
   exportVaultLoggerOutputToFiles,
   exportVaultSyncPlansToFiles,
 } from "./debugMode";
-import { SizesConflictModal } from "./syncSizesConflictNotice";
+import { SizesConflictModal } from "./sync/syncSizesConflictNotice";
 
 const DEFAULT_SETTINGS: RemotelySavePluginSettings = {
   s3: DEFAULT_S3_CONFIG,

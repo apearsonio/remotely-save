@@ -10,7 +10,7 @@ import {
   encryptStringToBase64url,
   getSizeFromEncToOrig,
   getSizeFromOrigToEnc,
-} from "../src/encrypt";
+} from "../src/encryption/encrypt";
 import { base64ToBase64url, bufferToArrayBuffer } from "../src/misc";
 
 chai.use(chaiAsPromised);

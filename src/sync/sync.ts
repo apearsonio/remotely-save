@@ -13,8 +13,8 @@ import type {
   DecisionType,
   FileOrFolderMixedState,
   SUPPORTED_SERVICES_TYPE,
-} from "./baseTypes";
-import { API_VER_STAT_FOLDER } from "./baseTypes";
+} from "../baseTypes";
+import { API_VER_STAT_FOLDER } from "../baseTypes";
 import {
   decryptBase32ToString,
   decryptBase64urlToString,
@@ -22,13 +22,13 @@ import {
   getSizeFromOrigToEnc,
   MAGIC_ENCRYPTED_PREFIX_BASE32,
   MAGIC_ENCRYPTED_PREFIX_BASE64URL,
-} from "./encrypt";
-import type { FileFolderHistoryRecord, InternalDBs } from "./localdb";
+} from "../encryption/encrypt";
+import type { FileFolderHistoryRecord, InternalDBs } from "../localdb";
 import {
   clearDeleteRenameHistoryOfKeyAndVault,
   getSyncMetaMappingByRemoteKeyAndVault,
   upsertSyncMetaMappingDataByVault,
-} from "./localdb";
+} from "../localdb";
 import {
   isHiddenPath,
   isVaildText,
@@ -38,8 +38,8 @@ import {
   atWhichLevel,
   unixTimeToStr,
   statFix,
-} from "./misc";
-import { RemoteClient } from "./remote";
+} from "../misc";
+import { RemoteClient } from "../remotes/remote";
 import {
   MetadataOnRemote,
   DeletionOnRemote,
@@ -48,10 +48,10 @@ import {
   DEFAULT_FILE_NAME_FOR_METADATAONREMOTE,
   DEFAULT_FILE_NAME_FOR_METADATAONREMOTE2,
   isEqualMetadataOnRemote,
-} from "./metadataOnRemote";
-import { isInsideObsFolder, ObsConfigDirFileType } from "./obsFolderLister";
+} from "../metadataOnRemote";
+import { isInsideObsFolder, ObsConfigDirFileType } from "../obsFolderLister";
 
-import { log } from "./moreOnLog";
+import { log } from "../moreOnLog";
 
 export type SyncStatusType =
   | "idle"

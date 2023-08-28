@@ -30,17 +30,17 @@ import {
   RemoteItem,
   S3Config,
   VALID_REQURL,
-} from "./baseTypes";
-import { decryptArrayBuffer, encryptArrayBuffer } from "./encrypt";
+} from "../baseTypes";
+import { decryptArrayBuffer, encryptArrayBuffer } from "../encryption/encrypt";
 import {
   arrayBufferToBuffer,
   bufferToArrayBuffer,
   mkdirpInVault,
-} from "./misc";
+} from "../misc";
 
 export { S3Client } from "@aws-sdk/client-s3";
 
-import { log } from "./moreOnLog";
+import { log } from "../moreOnLog";
 
 ////////////////////////////////////////////////////////////////////////////////
 // special handler using Obsidian requestUrl

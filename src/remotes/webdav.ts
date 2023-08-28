@@ -5,11 +5,11 @@ import { Queue } from "@fyears/tsqueue";
 import chunk from "lodash/chunk";
 import flatten from "lodash/flatten";
 import { getReasonPhrase } from "http-status-codes";
-import { RemoteItem, VALID_REQURL, WebdavConfig } from "./baseTypes";
-import { decryptArrayBuffer, encryptArrayBuffer } from "./encrypt";
-import { bufferToArrayBuffer, getPathFolder, mkdirpInVault } from "./misc";
+import { RemoteItem, VALID_REQURL, WebdavConfig } from "../baseTypes";
+import { decryptArrayBuffer, encryptArrayBuffer } from "../encryption/encrypt";
+import { bufferToArrayBuffer, getPathFolder, mkdirpInVault } from "../misc";
 
-import { log } from "./moreOnLog";
+import { log } from "../moreOnLog";
 
 import type {
   FileStat,

@@ -8,19 +8,19 @@ import {
   RemoteItem,
   COMMAND_CALLBACK_DROPBOX,
   OAUTH2_FORCE_EXPIRE_MILLISECONDS,
-} from "./baseTypes";
-import { decryptArrayBuffer, encryptArrayBuffer } from "./encrypt";
+} from "../baseTypes";
+import { decryptArrayBuffer, encryptArrayBuffer } from "../encryption/encrypt";
 import {
   bufferToArrayBuffer,
   getFolderLevels,
   hasEmojiInText,
   headersToRecord,
   mkdirpInVault,
-} from "./misc";
+} from "../misc";
 
 export { Dropbox } from "dropbox";
 
-import { log } from "./moreOnLog";
+import { log } from "../moreOnLog";
 
 export const DEFAULT_DROPBOX_CONFIG: DropboxConfig = {
   accessToken: "",

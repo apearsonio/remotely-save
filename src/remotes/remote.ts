@@ -5,13 +5,13 @@ import type {
   S3Config,
   SUPPORTED_SERVICES_TYPE,
   WebdavConfig,
-} from "./baseTypes";
-import * as dropbox from "./remoteForDropbox";
-import * as onedrive from "./remoteForOnedrive";
-import * as s3 from "./remoteForS3";
-import * as webdav from "./remoteForWebdav";
+} from "../baseTypes";
+import * as dropbox from "./dropbox";
+import * as onedrive from "./onedrive";
+import * as s3 from "./s3";
+import * as webdav from "./webdav";
 
-import { log } from "./moreOnLog";
+import { log } from "../moreOnLog";
 
 export class RemoteClient {
   readonly serviceType: SUPPORTED_SERVICES_TYPE;

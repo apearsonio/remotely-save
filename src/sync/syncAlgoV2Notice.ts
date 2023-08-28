@@ -1,8 +1,8 @@
 import { App, Modal, Notice, PluginSettingTab, Setting } from "obsidian";
-import type RemotelySavePlugin from "./main"; // unavoidable
-import type { TransItemType } from "./i18n";
+import type RemotelySavePlugin from "../main"; // unavoidable
+import type { TransItemType } from "../i18n";
 
-import { log } from "./moreOnLog";
+import { log } from "../moreOnLog";
 
 export class SyncAlgoV2Modal extends Modal {
   agree: boolean;

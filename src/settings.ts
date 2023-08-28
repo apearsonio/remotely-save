@@ -32,17 +32,17 @@ import {
   clearExpiredLoggerOutputRecords,
 } from "./localdb";
 import type RemotelySavePlugin from "./main"; // unavoidable
-import { RemoteClient } from "./remote";
+import { RemoteClient } from "./remotes/remote";
 import {
   DEFAULT_DROPBOX_CONFIG,
   getAuthUrlAndVerifier as getAuthUrlAndVerifierDropbox,
   sendAuthReq as sendAuthReqDropbox,
   setConfigBySuccessfullAuthInplace,
-} from "./remoteForDropbox";
+} from "./remotes/dropbox";
 import {
   DEFAULT_ONEDRIVE_CONFIG,
   getAuthUrlAndVerifier as getAuthUrlAndVerifierOnedrive,
-} from "./remoteForOnedrive";
+} from "./remotes/onedrive";
 import { messyConfigToNormal } from "./configPersist";
 import type { TransItemType } from "./i18n";
 import { checkHasSpecialCharForDir } from "./misc";
